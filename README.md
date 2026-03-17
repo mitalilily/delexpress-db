@@ -2,11 +2,13 @@
 
 This repo stores the PostgreSQL schema and SQL migration files for DelExpress.
 
-Deploy target:
-- Managed PostgreSQL on Render
+Production database:
+- Deploy the actual database as a managed PostgreSQL instance on Render.
+- Do not deploy this repo as a web service.
 
-Usage:
-- Create the Render Postgres database
-- Set DATABASE_URL on the backend service
-- Run the backend migration flow against that database
+How it connects:
+- Create the Render Postgres database.
+- Add its `DATABASE_URL` to the Render backend service.
+- Run the backend migration flow against that database.
+- Keep this repo as the source of truth for schema and SQL migrations.
 
